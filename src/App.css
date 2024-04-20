@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'decterm';
-  src: url('/fichaAgent/_decterm.ttf');
+  src: url('/fichaAgent/fonts/_decterm.ttf');
 }
 body{
   display: flex;

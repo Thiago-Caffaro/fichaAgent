@@ -41,7 +41,7 @@ function App() {
         <audio ref={audioRef} src="/fichaAgent/audios/AUDIO_SOPA.mp3" />
         <div id='audioBtn'>
           <img src="/fichaAgent/icons/play.png" onClick={playAudio}/>
-          <img id='stopBtn'
+          <img 
            style={isPlaying ? {height: '60px'} : {height: '0px', padding: '0px', border: '0px'}}
            src="/fichaAgent/icons/stop.png" onClick={stopAudio}/>
         </div>

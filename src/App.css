@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'decterm';
-  src: url('/fichaAgent/fonts/_decterm.ttf');
+  src: url('../fichaAgent/fonts/_decterm.ttf');
 }
 body{
   display: flex;
@@ -29,6 +29,8 @@ button:hover {
   background-color: #000000;
   font-family: 'decterm';
   color: #00ff08;
+
+  transition: all 1.5s;
 }
 #header>h1{
   text-align: center;
@@ -76,7 +78,9 @@ button:hover {
   border: 2px solid transparent;
   transition: all 0.5s;
 }
-
+#stopBtn{
+  
+}
 #theImage{
   height: 100%;
   position: relative;

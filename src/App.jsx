@@ -4,36 +4,46 @@ import { useRef, useState } from 'react'
 function App() {
   const audioRef = useRef();
   const imageRef = useRef();
-  const [imageSrc, setImageSrc] = useState("");
+  const mainRef = useRef();
 
-  function playAudio(){
+  const imageSize = "530px"
+  const [imageSrc, setImageSrc] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playAudio = () => {
     audioRef.current.play();
+    setIsPlaying(true)
   }
   const stopAudio = () => {
     audioRef.current.pause(); // Pausa o áudio
     audioRef.current.currentTime = 0; // Volta o áudio para o início
+    setIsPlaying(false)
+
   };
 
 
   const showImage = (direction) =>{
+    mainRef.current.style.width = "1400px";
     if (direction == "left"){
-      setImageSrc("/fichaAgent/images/left.gif")
-      imageRef.current.style.height = "400px";
+      setImageSrc("/fichaAgent/images/J1.png")
+      imageRef.current.style.height = imageSize;
     }
     else{
-      setImageSrc("/fichaAgent/images/right.jpeg")
-      imageRef.current.style.height = "400px";
+      setImageSrc("/fichaAgent/images/S1.png")
+      imageRef.current.style.height = imageSize;
     }
   }
 
   return (
-    <div id='mainContainer'>
+    <div id='mainContainer' ref={mainRef}>
       <div id='header'>
         <h1>INFORMAÇÕES DO AGENTE</h1>
-        <audio ref={audioRef} src="/fichaAgent/audios/morse.mp3" />
+        <audio ref={audioRef} src="/fichaAgent/audios/AUDIO_SOPA.mp3" />
         <div id='audioBtn'>
           <img src="/fichaAgent/icons/play.png" onClick={playAudio}/>
-          <img src="/fichaAgent/icons/stop.png" onClick={stopAudio}/>
+          <img id='stopBtn'
+           style={isPlaying ? {height: '60px'} : {height: '0px', padding: '0px', border: '0px'}}
+           src="/fichaAgent/icons/stop.png" onClick={stopAudio}/>
         </div>
       </div>
       <div id='main'>

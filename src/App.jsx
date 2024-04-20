@@ -17,11 +17,11 @@ function App() {
 
   const showImage = (direction) =>{
     if (direction == "left"){
-      setImageSrc("/images/left.gif")
+      setImageSrc("/fichaAgent/images/left.gif")
       imageRef.current.style.height = "400px";
     }
     else{
-      setImageSrc("/images/right.jpeg")
+      setImageSrc("/fichaAgent/images/right.jpeg")
       imageRef.current.style.height = "400px";
     }
   }
@@ -30,19 +30,19 @@ function App() {
     <div id='mainContainer'>
       <div id='header'>
         <h1>INFORMAÇÕES DO AGENTE</h1>
-        <audio ref={audioRef} src="/audios/morse.mp3" />
+        <audio ref={audioRef} src="/fichaAgent/audios/morse.mp3" />
         <div id='audioBtn'>
-          <img src="/icons/play.png" onClick={playAudio}/>
-          <img src="/icons/stop.png" onClick={stopAudio}/>
+          <img src="/fichaAgent/icons/play.png" onClick={playAudio}/>
+          <img src="/fichaagent/icons/stop.png" onClick={stopAudio}/>
         </div>
       </div>
       <div id='main'>
         <div id='buttons'>
           <button className='choiceBtn' id='leftBtn' onClick={() => showImage('left')}>
-            <img src="/icons/file.png" />
+            <img src="/fichaAgent/icons/file.png" />
           </button>
           <button className='choiceBtn' id='rightBtn' onClick={() => showImage('right')} >
-            <img src="/icons/file.png"/>
+            <img src="/fichaagent/icons/file.png"/>
           </button>
         </div>
       </div>

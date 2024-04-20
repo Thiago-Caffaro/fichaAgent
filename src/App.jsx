@@ -33,7 +33,7 @@ function App() {
         <audio ref={audioRef} src="/fichaAgent/audios/morse.mp3" />
         <div id='audioBtn'>
           <img src="/fichaAgent/icons/play.png" onClick={playAudio}/>
-          <img src="/fichaagent/icons/stop.png" onClick={stopAudio}/>
+          <img src="/fichaAgent/icons/stop.png" onClick={stopAudio}/>
         </div>
       </div>
       <div id='main'>
@@ -42,7 +42,7 @@ function App() {
             <img src="/fichaAgent/icons/file.png" />
           </button>
           <button className='choiceBtn' id='rightBtn' onClick={() => showImage('right')} >
-            <img src="/fichaagent/icons/file.png"/>
+            <img src="/fichaAgent/icons/file.png"/>
           </button>
         </div>
       </div>
